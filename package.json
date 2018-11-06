@@ -1,0 +1,27 @@
+{
+  "name": "pints-and-shells-database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.1.9",
+    "mongoose": "^5.3.9",
+    "nodemon": "^1.18.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WBHankins93/Pints-Shells-Database.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WBHankins93/Pints-Shells-Database/issues"
+  },
+  "homepage": "https://github.com/WBHankins93/Pints-Shells-Database#readme"
+}
