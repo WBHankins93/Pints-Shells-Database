@@ -70,7 +70,21 @@ router.put('/', async (req, res) => {
 
 
 // Delete route will go here soon
+router.delete('/:id', async (req, res) => {
 
+  try {
+
+    const deletedBrewFromTour = await Brewery.findByIdAndRemove(req.params.id)
+
+    res.json({
+      status: 200,
+      data: deletedBrewFromTour
+    })
+
+  } catch (err) {
+    res.send(err)
+  }
+})
 
 
 
