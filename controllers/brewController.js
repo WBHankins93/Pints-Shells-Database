@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
 
   try {
     const createdBrewTours = await Brewery.create(req.body);
-
+    console.log(createdBrewTours)
     res.json({
       status: 200,
       data: createdBrewTours
