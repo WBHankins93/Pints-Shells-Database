@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectionString = 'mongodb://localhost/brews';
 
-mongoose.connect(connectionString, { newUrlParser: true });
+mongoose.connect(connectionString, { useNewUrlParser: true });
 
 
 mongoose.connection.on('connected', () => {
