@@ -1,10 +1,21 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const brewController = require('./controllers/brewController');
 const cors           = require('cors');
+const session        = require('express-session');
+
+const brewController = require('./controllers/brewController');
+const authController  = require('./controllers/authController');
 
 require('./db/db');
+
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: false
+}));
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -17,7 +28,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use('/brews', brewController);
-
+app.use('/auth', authController);
 // merged data
 
 app.listen(process.env.PORT || 9000, () => {
