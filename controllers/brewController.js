@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
 
   try {
     const allBrewTours = await Brewery.find();
+    console.log(allBrewTours, 'GET REQUEST')
 
     res.json({
         status: 200,
