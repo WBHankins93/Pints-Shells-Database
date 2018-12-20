@@ -76,7 +76,7 @@ router.delete('/:id', async (req, res) => {
   try {
 
     const deletedBrewFromTour = await Brewery.findByIdAndRemove(req.params.id)
-console.log(deletedBrewFromTour, 'deleted')
+    console.log(deletedBrewFromTour, 'deleted')
     res.json({
       status: 200,
       data: deletedBrewFromTour
